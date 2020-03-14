@@ -55,7 +55,7 @@ This layer depends on:
 ## Quick Start with kas
 
 1. Install kas build tool from PyPi (sudo pip3 install kas)
-2. kas build meta-raspberrypi/kas-poky-rpi.yml
+2. kas build meta-raspberrypi/kas-poky-rpi.yml:meta-raspberrypi/board-<machine name>.yml (where machine name defines the specific MACHINE)
 3. dd to a SD card the generated sdimg file (use xzcat if rpi-sdimg.xz is used)
 4. Boot your RPI.
 
