@@ -36,6 +36,11 @@ bblayers_conf_header:
 local_conf_header:
   reduce_diskspace: |
     INHERIT += "rm_work_and_downloads"
+  systemd: |
+    VIRTUAL-RUNTIME_init_manager = "systemd"
+    DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
+    VIRTUAL-RUNTIME_initscripts = ""
+    DISTRO_FEATURES_append = " systemd"
   standard: |
     CONF_VERSION = "1"
     PACKAGE_CLASSES = "package_rpm"
