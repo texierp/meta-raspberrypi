@@ -49,14 +49,14 @@ This layer depends on:
 2. Add this layer to bblayers.conf and the dependencies above
 3. Set MACHINE in local.conf to one of the supported boards
 4. bitbake core-image-base
-5. dd to a SD card the generated sdimg file (use xzcat if rpi-sdimg.xz is used)
+5. use the `bmaptool` command to flash the SD card (e.g: bmaptool copy <image-name>.wic.bz2 /dev/<your-block-device>)
 6. Boot your RPI.
 
 ## Quick Start with kas
 
 1. Install kas build tool from PyPi (sudo pip3 install kas)
 2. kas build meta-raspberrypi/kas-poky-rpi.yml:meta-raspberrypi/board-<machine name>.yml (where machine name defines the specific MACHINE)
-3. dd to a SD card the generated sdimg file (use xzcat if rpi-sdimg.xz is used)
+3. use the `bmaptool` command to flash the SD card (e.g: bmaptool copy <image-name>.wic.bz2 /dev/<your-block-device>)
 4. Boot your RPI.
 
 To adjust the build configuration with specific options (I2C, SPI, ...), simply add
